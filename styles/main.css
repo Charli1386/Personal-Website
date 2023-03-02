@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fefefe;
+}
+
+#main
+{
+    height: 75vh;
+    background-color: antiquewhite;
+    box-shadow: 0px 1px 10px rgb(30,30,30);
+}
+
+#main .main-container
+{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#main .main-container .main-picture-container
+{
+    position: absolute;
+    height: 90%;
+    width: 30%;
+
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+    z-index: 100;
+}
+
+#main .main-container .main-picture-container img
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#main .main-container .main-infodiv
+{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    z-index: 0;
+    opacity: 0.82;
+
+    transition: 250ms;
+}
+
+#main .main-container .main-infodiv.infodiv-1
+{
+    background: url("../assets/right.png") no-repeat center center;
+    width: 50%;
+}
+
+.left-handler
+{
+    position: absolute;
+    top: 0;
+    height: 75vh;
+    width: 35%;
+    z-index: 10;
+}
+
+#main .main-container .main-infodiv.infodiv-2
+{
+    right: 0;
+    width: 50%;
+    background: url("../assets/left.png") no-repeat center center;
+}
+
+.right-handler
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 75vh;
+    width: 35%;
+    z-index: 10;
+
+}
+
+.right-handler.hide
+{
+   width: 0%;
+
+}
+
+.left-handler.hide
+{
+    width: 0%;
+}
+
+#main .main-container .hidden-caption-right
+{
+    position: absolute;
+    right: 50px;
+    height: 100%;
+    width: 1024px;
+    text-align: end;
+    z-index: 1;
+
+    padding: 4em 1em;
+
+    color: azure;
+    font-size: 1.2em;
+}
+
+
+#main .main-container .hidden-caption-left
+{
+    position: absolute;
+    left: 50px;
+    height: 100%;
+    width: 1024px;
+    z-index: 1;
+
+    padding: 4em 1em;
+
+    color: rgb(30,30,30);
+    font-size: 1.2em;
+}
+
+#main .main-container .hidden-caption-left .reveal-caption
+{
+    z-index: 1;
+    display: none;
+}
+
+#main .main-container .hidden-caption-right .reveal-caption
+{
+    z-index: 1;
+    display: none;
+}
+
+.div-header
+{
+    font-size: 60px;
+}
+
+.div-header-special
+{
+    color:rgb(201, 158, 16)
+}
+
+.caption-description
+{
+    font-size: 1.2em;
+    margin-top: 1em;
+    padding-right: 30%;
+}
+
+
+.caption-description .list-column
+{
+    padding: 1em;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+
+.pin
+{
+    position: absolute;
+    font-size: 20px;
+    display: none;
+}
+
+.pin-left
+{
+    top: 20px;
+    left: 20px;
+}
+
+.pin-right
+{
+    top: 20px;
+    right: 20px;
+    color: azure;
+}
+
+.pin.reveal{
+    display: block;
+}
+
+
+
+#main .main-container .main-infodiv.infodiv-1.reveal
+{
+    width: 100%;
+    background-image: url("../assets/right.gif");
+}
+
+#main .main-container .main-infodiv.infodiv-2.reveal
+{
+    width: 100%;
+    background-image: url("../assets/left.gif");
+}
+
+#main .main-container .hidden-caption-left .reveal-caption.reveal{
+    display: block;
+}
+
+#main .main-container .hidden-caption-right .reveal-caption.reveal{
+    display: block;
+}
+
+
+#main .main-container .main-infodiv.infodiv-1.hidden
+{
+    width: 0;
+}
+
+#main .main-container .main-infodiv.infodiv-2.hidden
+{
+    width: 0;
+}
+
+#main .main-container .hidden-caption-left .hidden-caption.hidden{
+    display: none;
+}
+#main .main-container .hidden-caption-right .hidden-caption.hidden{
+    display: none;
+}
+
+@media screen and (max-width: 1024px){
+    #main .main-container .main-picture-container
+    {
+        height: 70%;
+        width: 70%;
+    }
+}
