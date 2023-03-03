@@ -3,6 +3,25 @@ const right_handler = document.querySelector(".right-handler")
 
 let left_isClicked = false, right_isClicked = false
 
+let sources = ["../assets/Pic.png", "../assets/Pic-Left.png", "../assets/Pic-Right.png", "../assets/left.png", "../assets/left.gif", "../assets/right.png", "../assets/right.gif"]
+let images = []
+
+function preload(){
+    for(var i=0; i<sources.length; ++i)
+    {
+        images[i] = new Image();
+        images[i].src = sources[i]
+    }
+}
+
+window.addEventListener("load", ()=>{
+    preload()
+    var img = document.querySelector("#portrait")
+    img.src = images[0].src
+})
+
+
+
 left_pin_fill = () => {
     var left_pin = left_isClicked ? document.querySelectorAll(".bi-pin-angle") : document.querySelector(".bi-pin-angle-fill")
     if(left_isClicked) left_pin[0].className += "-fill"
@@ -24,6 +43,8 @@ left_infodivReveal = () => {
     var left_init_caption = document.querySelector(".hidden-caption-left .hidden-caption")
     var pin_left = document.querySelectorAll(".pin");
     var right_handler = document.querySelector(".right-handler")
+    //var img = document.querySelector("#portrait")
+    //img.src = images[1].src
     right_handler.classList.add("hide")
     pin_left[0].classList.add("reveal")
     left_reveal_caption.classList.add("reveal")
@@ -42,6 +63,8 @@ left_infodivHide = () =>{
     var left_init_caption = document.querySelector(".hidden-caption-left .hidden-caption")
     var pin_left = document.querySelectorAll(".pin");
     var right_handler = document.querySelector(".right-handler")
+    //var img = document.querySelector("#portrait")
+    //img.src = images[0].src
     right_handler.classList.remove("hide")
     pin_left[0].classList.remove("reveal")
     left_reveal_caption.classList.remove("reveal")
@@ -59,6 +82,8 @@ right_infodivReveal = () =>{
     var right_init_caption = document.querySelector(".hidden-caption-right .hidden-caption")
     var pin_right = document.querySelectorAll(".pin");
     var left_handler = document.querySelector(".left-handler")
+    //var img = document.querySelector("#portrait")
+    //img.src = images[2].src
     left_handler.classList.add("hide")
     pin_right[1].classList.add("reveal")
     right_reveal_caption.classList.add("reveal")
@@ -75,7 +100,9 @@ right_infodivHide = () => {
     var right_reveal_caption = document.querySelector(".hidden-caption-right .reveal-caption")
     var right_init_caption = document.querySelector(".hidden-caption-right .hidden-caption")
     var pin_right = document.querySelectorAll(".pin");
-    var left_handler = document.querySelector(".left-handler")
+    //var left_handler = document.querySelector(".left-handler")
+    //var img = document.querySelector("#portrait")
+    img.src = images[0].src
     left_handler.classList.remove("hide")
     pin_right[1].classList.remove("reveal")
     right_reveal_caption.classList.remove("reveal")
