@@ -107,7 +107,7 @@ body{
     right: 50px;
     height: 100%;
     width: 1024px;
-    text-align: end;
+    text-align: right;
     z-index: 1;
 
     padding: 4em 1em;
@@ -168,7 +168,7 @@ body{
 }
 
 
-.caption-description .list-column
+.hidden-caption-left .reveal-caption .caption-description .list-column
 {
     padding: 1em;
     columns: 2;
@@ -176,6 +176,21 @@ body{
     -moz-columns: 2;
 }
 
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+table td{
+    vertical-align: text-top;
+    padding-left: 11%;
+}
+
+table td .list-column
+{
+    list-style-position: inside;
+    text-align: left;
+}
 
 .pin
 {
