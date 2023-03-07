@@ -153,11 +153,18 @@ body{
     color:rgb(201, 158, 16)
 }
 
-.caption-description
+.hidden-caption-left .reveal-caption .caption-description
 {
     font-size: 1.2em;
     margin-top: 1em;
     padding-right: 30%;
+}
+
+.hidden-caption-right .reveal-caption .caption-description
+{
+    font-size: 1.2em;
+    margin-top: 1em;
+    padding-left: 30%;
 }
 
 
