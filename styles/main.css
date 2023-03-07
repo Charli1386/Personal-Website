@@ -59,7 +59,7 @@ body{
 
 #main .main-container .main-infodiv.infodiv-1
 {
-    background: url("../assets/right.png") no-repeat center center;
+    background: no-repeat center center;
     width: 50%;
 }
 
@@ -76,7 +76,7 @@ body{
 {
     right: 0;
     width: 50%;
-    background: url("../assets/left.png") no-repeat center center;
+    background: no-repeat center center;
 }
 
 .right-handler
@@ -221,13 +221,11 @@ table td .list-column
 #main .main-container .main-infodiv.infodiv-1.reveal
 {
     width: 100%;
-    background-image: url("../assets/right.gif");
 }
 
 #main .main-container .main-infodiv.infodiv-2.reveal
 {
     width: 100%;
-    background-image: url("../assets/left.gif");
 }
 
 #main .main-container .hidden-caption-left .reveal-caption.reveal{

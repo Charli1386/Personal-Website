@@ -18,6 +18,10 @@ window.addEventListener("load", ()=>{
     preload()
     var img = document.querySelector("#portrait")
     img.src = images[0].src
+    var left_handler = document.querySelector(".main-infodiv.infodiv-1");
+    left_handler.style.backgroundImage = "url('" + images[5].src + "')";
+    var right_handler = document.querySelector(".main-infodiv.infodiv-2");
+    right_handler.style.backgroundImage = "url('" + images[3].src + "')";
 })
 
 
@@ -53,6 +57,7 @@ left_infodivReveal = () => {
     right_caption.classList.add("hidden")
     left_infodiv.classList.add("reveal")
     right_infodiv.classList.add("hidden")
+    left_infodiv.style.backgroundImage = "url('" + images[6].src + "')";
 }
     
 
@@ -73,6 +78,7 @@ left_infodivHide = () =>{
     right_caption.classList.remove("hidden")
     left_infodiv.classList.remove("reveal")
     right_infodiv.classList.remove("hidden")
+    left_infodiv.style.backgroundImage = "url('" + images[5].src + "')";
 }
 
 right_infodivReveal = () =>{
@@ -92,6 +98,7 @@ right_infodivReveal = () =>{
     left_caption.classList.add("hidden")
     right_infodiv.classList.add("reveal")
     left_infodiv.classList.add("hidden")
+    right_infodiv.style.backgroundImage = "url('" + images[4].src + "')";
 }
 
 right_infodivHide = () => {
@@ -111,6 +118,7 @@ right_infodivHide = () => {
     left_caption.classList.remove("hidden")
     right_infodiv.classList.remove("reveal")
     left_infodiv.classList.remove("hidden")
+    right_infodiv.style.backgroundImage = "url('" + images[3].src + "')";
 }
 
 left_handler.addEventListener("mouseover", left_infodivReveal)
