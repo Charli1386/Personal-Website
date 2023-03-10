@@ -14,9 +14,11 @@ body{
 
 #main
 {
+    position: relative;
     height: 75vh;
     background-color: antiquewhite;
     box-shadow: 0px 1px 10px rgb(30,30,30);
+    z-index: 0;
 }
 
 #main .main-container
@@ -215,6 +217,50 @@ table td .list-column
 .pin.reveal{
     display: block;
 }
+
+#navigations .navbar
+{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    z-index: 0;
+}
+
+#navigations .navbar .navigation-tabs
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    align-items: center;
+    justify-content: space-around;
+}
+
+#navigations .navbar .navigation-tabs .buttons
+{
+    height: 100%;
+    width: 25%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#navigations .navbar .navigation-tabs .buttons:hover
+{
+    border-bottom: 5px solid rgb(201, 158, 16);
+}
+
+#navigations .navbar .navigation-tabs .buttons.reveal
+{
+    border-bottom: 5px solid rgb(201, 158, 16);
+}
+
 
 
 
